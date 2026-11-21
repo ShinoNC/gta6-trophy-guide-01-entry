@@ -2,14 +2,18 @@
 // Copies app/ and screenshots/ from this repository into the output
 // directory and writes dossier.json with the kit's buildDossier.
 import { buildDossier } from "./vendor/makefun-frontend.ts";
-import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { cpSync, mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const repoRoot = new URL(".", import.meta.url).pathname;
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
-rmSync(outputDir, { recursive: true, force: true });
+// Create the output dir if missing, then clear only its contents: the
+// output dir itself may be a bind mount, so it must not be removed.
 mkdirSync(outputDir, { recursive: true });
+for (const child of readdirSync(outputDir)) {
+  rmSync(join(outputDir, child), { recursive: true, force: true });
+}
 
 for (const folder of ["app", "screenshots"]) {
   cpSync(join(repoRoot, folder), join(outputDir, folder), { recursive: true });
