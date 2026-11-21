@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Platinum — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="logo">VP</div>
+  <div>
+    <h1>VICE PLATINUM</h1>
+    <div class="subtitle">Grand Theft Auto VI — trophy guide &amp; tracker · PlayStation 5 · 55 trophies · offline</div>
+    <div class="chips">
+      <span class="chip">Platinum <b>~200 h</b></span>
+      <span class="chip">Difficulty <b>4/10</b></span>
+      <span class="chip"><b>1</b> playthrough</span>
+      <span class="chip"><b>0</b> online trophies</span>
+      <span class="chip"><b>1</b> possibly missable</span>
+      <span class="chip"><b>15</b> manual saves</span>
+    </div>
+    <div class="audit" id="auditStrip">Counting citations…</div>
+  </div>
+  <div class="ringwrap">
+    <div class="ring" id="ringCount">0/55</div>
+    <div class="ringbar"><i id="ringFill" style="width:0%"></i></div>
+    <div class="gradecounts" id="gradeCounts"></div>
+  </div>
+</header>
+<nav class="tabs" id="tabs">
+  <button data-view="tracker" class="active">Tracker</button>
+  <button data-view="roadmap">Roadmap</button>
+  <button data-view="missables">Missables</button>
+  <button data-view="checklist">100% Checklist</button>
+</nav>
+<div class="toolbar" id="toolbar">
+  <input type="search" id="search" placeholder="Search trophies, missions, guides…" aria-label="Search trophies">
+  <span id="kindChips"></span>
+  <select id="gradeFilter" aria-label="Filter by grade">
+    <option value="">All grades</option>
+    <option value="platinum">Platinum</option>
+    <option value="gold">Gold</option>
+    <option value="silver">Silver</option>
+    <option value="bronze">Bronze</option>
+  </select>
+  <label><input type="checkbox" id="hideEarned"> Hide earned</label>
+  <label><input type="checkbox" id="spoilerToggle"> Spoiler-safe</label>
+</div>
+<div class="nextup" id="nextUp"></div>
+<main id="viewTracker">
+  <div class="list">
+    <p class="countline" id="countLine"></p>
+    <div id="trophyList"></div>
+  </div>
+  <aside class="pane" id="guidePane"></aside>
+</main>
+<section class="view" id="viewRoadmap" hidden></section>
+<section class="view" id="viewMissables" hidden></section>
+<section class="view" id="viewChecklist" hidden></section>
+<div class="actions">
+  <button id="exportBtn">Export progress</button>
+  <button id="importBtn">Import progress</button>
+  <input type="file" id="importFile" accept=".json,application/json" hidden>
+  <button id="resetBtn">Reset progress</button>
+</div>
+<footer>
+  <h3>KEYBOARD SHORTCUTS</h3>
+  <p><kbd>/</kbd> search &nbsp; <kbd>e</kbd> export &nbsp; <kbd>s</kbd> spoiler-safe on/off &nbsp; <kbd>h</kbd> hide earned on/off &nbsp; <kbd>1</kbd>–<kbd>4</kbd> switch views &nbsp; <kbd>Esc</kbd> clear search</p>
+  <h3>SOURCES — EVERY CLAIM CITED</h3>
+  <p id="sourceCounts"></p>
+  <p>[1] Exophase — official trophy list: names, descriptions, grades. [2] PSNProfiles — grades and PSN counts. [3] KeenGamer trophy guide — roadmap, methods, 100% numbers. [4] OutputLag trophy list — missable warning, chapter and save advice. Guide text is this entry's own words; only the official names and descriptions are quoted exactly as PlayStation publishes them.</p>
+  <p>Counting method: one claim = one numbered citation marker [n] in a guide or roadmap step. The audit strip above is computed live from this guide's data: total markers, trophies citing 2 or more sources, the 4 sources, and the disputes shown (1 possibly-missable hedge + 4 trophies with no confirmed method yet).</p>
+  <p>Unconfirmed as of 19/11/2026: Bad Luck, I Guess · The Truth Is Out There · In The Beginning… · Capital Offense. No guide has confirmed their exact methods yet — this guide says so plainly instead of inventing steps.</p>
+</footer>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
